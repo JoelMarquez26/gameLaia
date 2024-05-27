@@ -25,7 +25,7 @@
 body {
   height: 100vh;
   margin: 0;
-  background-image: url('/assets/img/fondo.gif');
+  background-image: url(/assets/img/fondo.gif);
   overflow: hidden;
   background-size:cover;
   background-position: center 25%; 
