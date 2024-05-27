@@ -242,7 +242,7 @@ function verificarCoincidencia() {
             title: " ",
             width: 600,
             padding: '7em',
-            background: "#fff url(/assets/img/ganaste.gif)",
+            background: "#fff url(assets/img/ganaste.gif)",
             backdrop: `
               rgba(0,0,0,0.8)
               no-repeat
@@ -275,7 +275,7 @@ function verificarCoincidencia() {
           Swal.fire({
             title: '<span style="color:#345675; font-size: 18px; font-family: var(--fontTitleH);">Tu puntaje es:</span>',
             html: `<span style="color:#FDAE43; font-size: 30px;  font-family: var(--fontTitleH);"> ${puntajeTotal} puntos </span>`,
-            imageUrl: '/assets/img/LaiasBITMOJI/super awesome.png',  
+            imageUrl: 'assets/img/LaiasBITMOJI/super awesome.png',  
             imageWidth: 400,
             imageHeight: 390,
             imageAlt: 'Imagen de felicitación',
