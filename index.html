@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Style CSS -->
-<link rel="stylesheet" href="style.css"></link>
+<link rel="stylesheet" href="assets/style.css"></link>
 <!-- FONT-AWESOME -->
 <script src="https://kit.fontawesome.com/f1d3ec1e99.js" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
@@ -17,27 +17,12 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
 <!-- Animation.css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<title>India Game now</title>
+<title>India Game</title>
 
 </head>
 
 <body>
-<?php
-         session_start();
-        if(isset($_SESSION["usuario"]))
-       {
-        include("../../php/conexion.php");
-        $id=$_SESSION["id"];
-        $seleccionar="SELECT juegos_desbloqueados FROM `usuarios` WHERE id=$id;";
-        $preparedStatements=$conexion->prepare($seleccionar);
-        $preparedStatements->execute();
-        $registros=$preparedStatements->fetchAll();
-        $conexion=null;
-        $nuevoJuegoDesbloqueado=$registros[0]["juegos_desbloqueados"];
-        $_SESSION["juegosDesbloqueados"]=$nuevoJuegoDesbloqueado;
-        if($_SESSION["juegosDesbloqueados"]===4)
-        {
-    ?>
+
   <ul class="nav justify-content-end" id="menu"  style="display:none">
     <div class="opciones">
             <div id="contador" style="display:none" class="contador">
@@ -63,41 +48,5 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
     </div>     
   </div>
 
-  <form action="../../php/insertarPuntuacion.php" method="post" id="formularioPuntaje">
-                    <label for="juego">
-                        Juego:
-                    </label>
-                    <input type="text" id="juego" name="Juego" value=4 readonly>
-                    <br>
-                    <br>
-                    <label for="id">
-                        Id usuario:
-                    </label>
-                    <input type="text" id="id" name="Id" value=<?php echo $_SESSION["id"]?> readonly>
-                    <br>
-                    <br>
-                    <label for="puntuacion">
-                        Puntuacion:
-                    </label>
-                    <input type="text" id="puntuacion" name="Puntuacion" value="">
-                    <br>
-                    <br>
-                    <input type="submit" name="Enviar" id="enviar" value="Enviar">
-    </form>
-
-    <?php
-            }
-            else
-            {
-              header("Location:../../index.php");
-              exit();
-            }
-         }
-         else
-         {
-           header("Location:../../index.php");
-           exit();
-         }
-    ?>
 </body>
 </html>

@@ -53,7 +53,7 @@ function iniciarJuego(nivel) {
     cartaElemento.classList.add('card');
     cartaElemento.dataset.index = index;
     const imagen = document.createElement('img');
-    imagen.src = `img/${imagenComun}`; // Ruta de la imagen común
+    imagen.src = `assets/img/${imagenComun}`; // Ruta de la imagen común
     imagen.classList.add('imagen-carta');
     cartaElemento.appendChild(imagen);
     cartaElemento.addEventListener('click', () => voltearCarta(index));
@@ -165,7 +165,7 @@ function voltearCarta(index) {
     cartaElemento.classList.add('volteada'); // Clase para activar la animación
     
     // Cambiar la imagen de la carta para mostrar la del array
-    imagen.src = `img/${arraySeleccionado[index]}`;
+    imagen.src = `assets/img/${arraySeleccionado[index]}`;
     
     cartaElemento.classList.add('seleccionada');
     
@@ -242,7 +242,7 @@ function verificarCoincidencia() {
             title: " ",
             width: 600,
             padding: '7em',
-            background: "#fff url(img/ganaste.gif)",
+            background: "#fff url(/assets/img/ganaste.gif)",
             backdrop: `
               rgba(0,0,0,0.8)
               no-repeat
@@ -275,7 +275,7 @@ function verificarCoincidencia() {
           Swal.fire({
             title: '<span style="color:#345675; font-size: 18px; font-family: var(--fontTitleH);">Tu puntaje es:</span>',
             html: `<span style="color:#FDAE43; font-size: 30px;  font-family: var(--fontTitleH);"> ${puntajeTotal} puntos </span>`,
-            imageUrl: 'img/LaiasBITMOJI/super awesome.png',  
+            imageUrl: '/assets/img/LaiasBITMOJI/super awesome.png',  
             imageWidth: 400,
             imageHeight: 390,
             imageAlt: 'Imagen de felicitación',
@@ -307,8 +307,8 @@ function verificarCoincidencia() {
      const imagen1 = cartaElemento1.querySelector('.imagen-carta');
      const imagen2 = cartaElemento2.querySelector('.imagen-carta');
      
-     imagen1.src = 'img/logo_india.png'; // Ruta de la imagen común
-     imagen2.src = 'img/logo_india.png'; // Ruta de la imagen común
+     imagen1.src = 'assets/img/logo_india.png'; // Ruta de la imagen común
+     imagen2.src = 'assets/img/logo_india.png'; // Ruta de la imagen común
 
      cartaElemento1.classList.remove('volteada'); 
      cartaElemento2.classList.remove('volteada'); 

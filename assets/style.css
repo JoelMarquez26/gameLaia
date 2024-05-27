@@ -25,18 +25,18 @@
 body {
   height: 100vh;
   margin: 0;
-  background-image: url('img/fondo.gif');
+  background-image: url('/assets/img/fondo.gif');
   overflow: hidden;
   background-size:cover;
   background-position: center 25%; 
   background-repeat: no-repeat;
   background-position: center;
-  cursor: url(img/cursor/default.png), auto;
+  cursor: url(/assets/img/cursor/default.png), auto;
   
 }
 
 .cursor-mano {
-  cursor: url(img/cursor/manito.png), auto;
+  cursor: url(/assets/img/cursor/manito.png), auto;
 }
 
 .boton{
@@ -53,7 +53,7 @@ body {
   background-color:rgb(12, 70, 152);
   color: #F7F7F7;
   border: none;
-  cursor: url(img/cursor/manito.png), auto;
+  cursor: url(/assets/cursor/manito.png), auto;
 }
 
 #botonReiniciar{
@@ -67,7 +67,7 @@ body {
 
 #botonReiniciar:hover{
   color: rgb(0, 0, 0); 
-  cursor: url(img/cursor/manito.png), auto;
+  cursor: url(/assets/img/cursor/manito.png), auto;
 }
 
 #botonSalir{
@@ -75,13 +75,13 @@ body {
   background-color: transparent;
   border: none;
   color: rgb(224, 14, 14);
-  cursor: url(img/cursor/manito.png), auto;
+  cursor: url(/assets/img/cursor/manito.png), auto;
 }
 
 
 #botonSalir:hover{
   color: #c39493; 
-  cursor: url(img/cursor/manito.png), auto;
+  cursor: url(/assets/img/cursor/manito.png), auto;
 }
 #menu{
   position:static;
@@ -135,7 +135,7 @@ body {
 
 .card:hover{
   transform: scale(1.1);
-  cursor: url(img/cursor/manito.png), auto;
+  cursor: url(/assets/img/cursor/manito.png), auto;
 }
 
 .container-fluid {
